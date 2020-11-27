@@ -2,6 +2,9 @@
 // Created by luis on 27/11/2020.
 //
 
+#ifndef PROJET_GIT_ESGI_GENERATE_H
+#define PROJET_GIT_ESGI_GENERATE_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -44,10 +47,7 @@ struct Attr
     char *value;
 } Attr;
 
+struct Tag *createTag(char *start, struct Attr **attrList, int AttrAmount, struct Tag **childList, int childAmount, char *content, char *end);
 
-
-
-#ifndef PROJET_GIT_ESGI_GENERATE_H
-#define PROJET_GIT_ESGI_GENERATE_H
 
 #endif //PROJET_GIT_ESGI_GENERATE_H
