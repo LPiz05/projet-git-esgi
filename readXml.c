@@ -158,3 +158,13 @@ void baliseFermante(FILE *f, struct Tag *tab)
     strcpy(tab->end, nomBalise);
 }
 
+void lectureFichier(FILE *f, struct Tag *tab)
+{
+    tab->childsAmount = 0;
+    tab->childTags = NULL;
+
+    baliseOuvrante(f, tab);
+    lecturecontent(f, tab);
+    baliseFermante(f, tab);
+}
+
